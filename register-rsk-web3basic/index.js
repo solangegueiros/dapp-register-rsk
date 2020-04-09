@@ -1,6 +1,6 @@
 // Source code to interact with smart contract
 
-//connection with node
+//connection with local node
 var web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:4444/'));
 
 // contractAddress and abi are setted after contract deploy
@@ -15,11 +15,11 @@ var account;
 
 web3.eth.getAccounts(function(err, accounts) {
   if (err != null) {
-    alert("Ocorreu um erro ao buscar suas contas.");
+    alert("Error retrieving accounts.");
     return;
   }
   if (accounts.length == 0) {
-    alert("Nenhuma conta encontrada! Verifique se o Ethereum client está configurado corretamente.");
+    alert("No account found! Make sure the Ethereum client is configured properly.");
     return;
   }
   account = accounts[0];
