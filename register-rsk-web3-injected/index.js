@@ -1,18 +1,30 @@
 // Source code to interact with smart contract
 
-//connection with node using web3 injected
-if (window.ethereum) {
-  window.web3 = new Web3(window.ethereum)
-  window.ethereum.enable()
-}
-else if (window.web3) {
-  window.web3 = new Web3(window.web3.currentProvider)
-}
-else {
-  window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
-}
+// web3 provider with fallback for old version
+window.addEventListener('load', async () => {
+  // New web3 provider
+  if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      try {
+          // ask user for permission
+          await ethereum.enable();
+          // user approved permission
+      } catch (error) {
+          // user rejected permission
+          console.log('user rejected permission');
+      }
+  }
+  // Old web3 provider
+  else if (window.web3) {
+      window.web3 = new Web3(web3.currentProvider);
+      // no need to ask for permission
+  }
+  // No web3 provider
+  else {
+      console.log('No web3 provider detected');
+  }
+});
 console.log (window.web3.currentProvider)
-
 
 // contractAddress and abi are setted after contract deploy
 var contractAddress = '0xc864D0fef177A69aFa8E302A1b90e450910A4c3E';
