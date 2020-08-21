@@ -1,16 +1,20 @@
 {
-  "name": "Register",
+  "name": "Register rsk3",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Register example using rsk3.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["blockchain", "smart contracts", "ethereum", "rsk", "web3"],
+  "author": "Solange Gueiros <solangegueiros@gmail.com> (https://solange.dev)",
   "license": "ISC",
   "dependencies": {
-    "@rsksmart/rsk3": "^0.3.1",
+    "@rsksmart/rsk3": "^0.3.4",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }

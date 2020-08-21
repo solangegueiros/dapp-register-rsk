@@ -1,4 +1,12 @@
 # Register dapp using rsk3.js
 
-This is not working yet.
-Do not use it.
+In the project folder, run these commands:
+
+```shell
+npm install
+npx webpack
+node server.js
+```
+
+Go to
+[http://localhost:3300](http://localhost:3300)

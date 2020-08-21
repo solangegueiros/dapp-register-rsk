@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["blockchain", "smart contracts", "ethereum", "rsk", "web3"],
+  "author": "Solange Gueiros <solangegueiros@gmail.com> (https://solange.dev)",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
